@@ -1,14 +1,55 @@
-.navbar {
+/* Variables */
+/* GENERAL */
+* {
+  font-family: "Shrikhand", sans-serif;
+  font-size: 16px;
+}
+
+.fa-solid {
+  color: #EAEAEA;
+}
+
+body {
   display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+  margin: 0;
 }
-.navbar__link {
-  margin-left: 30px;
-  color: #242424;
-  text-decoration: none;
+
+@media (max-width: 767.98px) {
+  main {
+    padding: 0 15px;
+  }
 }
-.navbar__link--purple {
-  color: #a5b4fc;
+
+.main-container {
+  width: 100%;
+  padding: 0 0px;
+  box-sizing: border-box;
+  text-align: center;
+  margin: auto;
+}
+@media (max-width: 767.98px) {
+  .main-container {
+    padding: 0;
+  }
+}
+
+/* HEADER */
+.logo {
+  padding: 20px 0px 8px 0px;
+}
+.logo img {
+  width: 50%;
+}
+
+.localisation {
+  background-color: #EAEAEA;
+  box-shadow: inset 0px 2px 4px 0px rgba(0, 0, 0, 0.1490196078);
+  padding: 15px;
+}
+.localisation i {
+  color: black;
+}
+.localisation p {
+  display: inline;
 }/*# sourceMappingURL=style.css.map */
