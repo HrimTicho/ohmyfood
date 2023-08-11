@@ -32,7 +32,7 @@
                     <p>
                         Découvrez des restaurants d'exception, sélectionnés par nos soins.
                     </p>
-                    <input type="button" value="Explorer nos restaurants" class="btn btn--classic">
+                    <a href="#blc_restaurant"  class="btn btn--classic">Explorer nos restaurants</a>
                 </article>
             </section>
             <section class="bloc_fonctionnement">
@@ -70,17 +70,21 @@
 
                 </article>
             </section>
-            <section class="bloc_restaurants">
+            <section class="bloc_restaurants" id="blc_restaurant">
                 <article>
                     <h1 class="title bloc_restaurants__title">Restaurants</h1>
+                    <div class="bloc_restaurants__loader">
+                        <span><strong>Chargement des restaurants...</strong></span>
+                        <div class="bloc_restaurants__loader__loadingBar"></div>
+                    </div>
                     <section class="bloc_restaurants__content">
                         <article class="bloc_restaurants__content__case">
                             <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" class="bloc_restaurants__content__case__img">
                             <p class="bloc_restaurants__content__case__new bloc_restaurants__content__case__new--on">
                                 Nouveau
                             </p>
-                            <i type="button" class="fa-regular fa-heart fa-lg bloc_restaurants__content__case__icon bloc_restaurants__content__case__icon--blank"></i>
-                            <i type="button" class="fa-solid fa-heart fa-lg bloc_restaurants__content__case__icon bloc_restaurants__content__case__icon--colored"></i>
+                            <input type="checkbox" class="bloc_restaurants__content__case__icon" id="heart1">
+                            <label for="heart1" class="bloc_restaurants__content__case__iconLabel"></label>
                             <h1 class="title bloc_restaurants__content__case__title">La palette du goût</h1>
                             <p class="bloc_restaurants__content__case__text">
                                 Ménilmontant
@@ -91,8 +95,8 @@
                             <p class="bloc_restaurants__content__case__new bloc_restaurants__content__case__new--on">
                                 Nouveau
                             </p>
-                            <i class="fa-regular fa-heart fa-lg bloc_restaurants__content__case__icon bloc_restaurants__content__case__icon--blank"></i>
-                            <i class="fa-solid fa-heart fa-lg bloc_restaurants__content__case__icon bloc_restaurants__content__case__icon--colored"></i>
+                            <input type="checkbox" class="bloc_restaurants__content__case__icon" id="heart2">
+                            <label for="heart2" class="bloc_restaurants__content__case__iconLabel"></label>
                             <h1 class="title bloc_restaurants__content__case__title">La note enchantée</h1>
                             <p class="bloc_restaurants__content__case__text">
                                 Charonne
@@ -103,8 +107,8 @@
                             <p class="bloc_restaurants__content__case__new bloc_restaurants__content__case__new--off">
                                 Nouveau
                             </p>
-                            <i class="fa-regular fa-heart fa-lg bloc_restaurants__content__case__icon bloc_restaurants__content__case__icon--blank"></i>
-                            <i class="fa-solid fa-heart fa-lg bloc_restaurants__content__case__icon bloc_restaurants__content__case__icon--colored"></i>
+                            <input type="checkbox" class="bloc_restaurants__content__case__icon" id="heart3">
+                            <label for="heart3" class="bloc_restaurants__content__case__iconLabel"></label>
                             <h1 class="title bloc_restaurants__content__case__title">À la française</h1>
                             <p class="bloc_restaurants__content__case__text">
                                 Cité Rouge
@@ -115,8 +119,8 @@
                             <p class="bloc_restaurants__content__case__new bloc_restaurants__content__case__new--off">
                                 Nouveau
                             </p>
-                            <i class="fa-regular fa-heart fa-lg bloc_restaurants__content__case__icon bloc_restaurants__content__case__icon--blank"></i>
-                            <i class="fa-solid fa-heart fa-lg bloc_restaurants__content__case__icon bloc_restaurants__content__case__icon--colored"></i>
+                            <input type="checkbox" class="bloc_restaurants__content__case__icon" id="heart4">
+                            <label for="heart4" class="bloc_restaurants__content__case__iconLabel"></label>
                             <h1 class="title bloc_restaurants__content__case__title">Le délice des sens</h1>
                             <p class="bloc_restaurants__content__case__text">
                                 Folie-Méricourt
