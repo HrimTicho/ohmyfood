@@ -26,18 +26,18 @@
             </div>
         </header>
         <main>
-            <section class="bloc_exploration">
-                <article>
+            <div class="bloc_exploration">
+                <section>
                     <h1 class="title">Réservez le menu qui vous convient</h1>
                     <p>
                         Découvrez des restaurants d'exception, sélectionnés par nos soins.
                     </p>
                     <a href="#blc_restaurant"  class="btn btn--classic">Explorer nos restaurants</a>
-                </article>
-            </section>
-            <section class="bloc_fonctionnement">
-                <article>
-                    <h1 class="title">Fonctionnement</h1>
+                </section>
+            </div>
+            <div class="bloc_fonctionnement">
+                <section>
+                    <h2 class="title">Fonctionnement</h2>
                     <div class="bloc_fonctionnement__case">
                         <p class="bloc_fonctionnement__case__number">
                             1
@@ -68,78 +68,108 @@
                         </p>
                     </div>
 
-                </article>
-            </section>
-            <section class="bloc_restaurants" id="blc_restaurant">
-                <article>
-                    <h1 class="title bloc_restaurants__title">Restaurants</h1>
+                </section>
+            </div>
+            <div class="bloc_restaurants" id="blc_restaurant">
+                <section>
+                    <h2 class="title bloc_restaurants__title">Restaurants</h2>
                     <div class="bloc_restaurants__loader">
                         <span><strong>Chargement des restaurants...</strong></span>
                         <div class="bloc_restaurants__loader__loadingBar"></div>
                     </div>
                     <div class="bloc_restaurants__content">
-                        <a href="menu/La_Palette_Du_Gout.html" class="bloc_restaurants__content__case">
-                            <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" class="bloc_restaurants__content__case__img" alt="image plat restaurant">
-                            <p class="bloc_restaurants__content__case__new bloc_restaurants__content__case__new--on">
-                                Nouveau
-                            </p>
-                            
-                            <h1 class="title bloc_restaurants__content__case__title">La palette du goût</h1>
-                            <p class="bloc_restaurants__content__case__text">
-                                Ménilmontant
-                            </p>
-                            
+                        <section class="bloc_restaurants__content__case">
+                            <a href="menu/La_Palette_Du_Gout.html" class="bloc_restaurants__content__case__img">
+                                <img src="images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="image plat restaurant">
+                            </a>
+                            <a href="menu/La_Palette_Du_Gout.html" class="bloc_restaurants__content__case__new bloc_restaurants__content__case__new--on">
+                                <p>
+                                    Nouveau
+                                </p>
+                            </a>
+                            <a href="menu/La_Palette_Du_Gout.html" class="title bloc_restaurants__content__case__title">
+                                <h3>La palette du goût</h3>
+                            </a>
+                            <a href="menu/La_Palette_Du_Gout.html" class="bloc_restaurants__content__case__text">
+                                <p>
+                                    Ménilmontant
+                                </p>
+                            </a>
                             <input type="checkbox" class="bloc_restaurants__content__case__icon" id="heart1">
                             <label for="heart1" class="bloc_restaurants__content__case__iconLabel"></label>
-                        </a>
-                        <a href="menu/La_Note_Enchantee.html" class="bloc_restaurants__content__case">
-                            <img src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" class="bloc_restaurants__content__case__img" alt="image plat restaurant">
-                            <p class="bloc_restaurants__content__case__new bloc_restaurants__content__case__new--on">
-                                Nouveau
-                            </p>
+                        </section>
+                        <section class="bloc_restaurants__content__case">
+                            <a href="menu/La_Note_Enchantee.html" class="bloc_restaurants__content__case__img">
+                                <img src="images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg" alt="image plat restaurant">
+                            </a>
+                            <a href="menu/La_Note_Enchantee.html" class="bloc_restaurants__content__case__new bloc_restaurants__content__case__new--on">
+                                <p>
+                                    Nouveau
+                                </p>
+                            </a>
+                            <a href="menu/La_Note_Enchantee.html" class="title bloc_restaurants__content__case__title">
+                                <h3>La note enchantée</h3>
+                            </a>
+                            <a href="menu/La_Note_Enchantee.html" class="bloc_restaurants__content__case__text">
+                                <p>
+                                    Charonne
+                                </p>
+                            </a>
                             <input type="checkbox" class="bloc_restaurants__content__case__icon" id="heart2">
                             <label for="heart2" class="bloc_restaurants__content__case__iconLabel"></label>
-                            <h1 class="title bloc_restaurants__content__case__title">La note enchantée</h1>
-                            <p class="bloc_restaurants__content__case__text">
-                                Charonne
-                            </p>
-                        </a>
-                        <a href="menu/A_La_Francaise.html" class="bloc_restaurants__content__case">
-                            <img src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" class="bloc_restaurants__content__case__img" alt="image plat restaurant">
-                            <p class="bloc_restaurants__content__case__new bloc_restaurants__content__case__new--off">
-                                Nouveau
-                            </p>
+                        </section>
+                        <section class="bloc_restaurants__content__case">
+                            <a href="menu/A_La_Francaise.html" class="bloc_restaurants__content__case__img">
+                                <img src="images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="image plat restaurant">
+                            </a>
+                            <a href="menu/A_La_Francaise.html" class="bloc_restaurants__content__case__new bloc_restaurants__content__case__new--off">
+                                <p>
+                                    Nouveau
+                                </p>
+                            </a>
+                            <a href="menu/A_La_Francaise.html" class="title bloc_restaurants__content__case__title">
+                                <h3>À la française</h3>
+                            </a>
+                            <a href="menu/A_La_Francaise.html" class="bloc_restaurants__content__case__text">
+                                <p>
+                                    Cité Rouge
+                                </p>
+                            </a>
                             <input type="checkbox" class="bloc_restaurants__content__case__icon" id="heart3">
                             <label for="heart3" class="bloc_restaurants__content__case__iconLabel"></label>
-                            <h1 class="title bloc_restaurants__content__case__title">À la française</h1>
-                            <p class="bloc_restaurants__content__case__text">
-                                Cité Rouge
-                            </p>
-                        </a>
-                        <a href="menu/Le_Delice_Des_Sens.html" class="bloc_restaurants__content__case">
-                            <img src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" class="bloc_restaurants__content__case__img" alt="image plat restaurant">
-                            <p class="bloc_restaurants__content__case__new bloc_restaurants__content__case__new--off">
-                                Nouveau
-                            </p>
+                        </section>
+                        <section class="bloc_restaurants__content__case">
+                            <a href="menu/Le_Delice_Des_Sens.html" class="bloc_restaurants__content__case__img">
+                                <img src="images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="image plat restaurant">
+                            </a>
+                            <a href="menu/Le_Delice_Des_Sens.html" class="bloc_restaurants__content__case__new bloc_restaurants__content__case__new--off">
+                                <p>
+                                    Nouveau
+                                </p>
+                            </a>
+                            <a href="menu/Le_Delice_Des_Sens.html" class="title bloc_restaurants__content__case__title">
+                                <h3>Le délice des sens</h3>
+                            </a>
+                            <a href="menu/Le_Delice_Des_Sens.html" class="bloc_restaurants__content__case__text">
+                                <p>
+                                    Folie-Méricourt
+                                </p>
+                            </a>
                             <input type="checkbox" class="bloc_restaurants__content__case__icon" id="heart4">
                             <label for="heart4" class="bloc_restaurants__content__case__iconLabel"></label>
-                            <h1 class="title bloc_restaurants__content__case__title">Le délice des sens</h1>
-                            <p class="bloc_restaurants__content__case__text">
-                                Folie-Méricourt
-                            </p>
-                        </a>
+                        </section>
                     </div>
-                </article>
-            </section>
+                </section>
+            </div>
         </main>
         <footer>
-            <nav class="navbar_footer">
+            <nav class="navbar_footer footer__menu">
                 <h1 class="logo_title">ohmyfood</h1>
                 <ul>
                     <li><strong><a href=""><i class="fa-solid fa-utensils fa-xs"></i>Proposer un restaurant</a></strong></li>
                     <li><strong><a href=""><i class="fa-solid fa-handshake-angle fa-xs"></i>Devenir partenaire</a></strong></li>
                     <li><a href="" >Mentions légales</a></li>
-                    <li><a href="" >Contact</a></li>
+                    <li><a href="mailto:email@exemple.com" >Contact</a></li>
                 </ul>
             </nav>
         </footer>

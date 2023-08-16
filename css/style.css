@@ -127,7 +127,7 @@ main {
 .bloc_fonctionnement {
   padding: 40px 0px 50px 0px;
 }
-.bloc_fonctionnement h1 {
+.bloc_fonctionnement h2 {
   text-align: left;
   padding-left: 15px;
 }
@@ -259,6 +259,14 @@ main {
   height: 0px;
   animation: fadeIn 3000ms both;
 }
+@media (min-width: 767.98px) {
+  .bloc_restaurants__content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0 5% 0 5%;
+  }
+}
 .bloc_restaurants__content__case {
   width: 90%;
   height: 250px;
@@ -270,8 +278,17 @@ main {
   grid-template-rows: 5% 8% 2% 54% 3% 10% 1% 10% 2%;
   gap: 0px 0px;
 }
+@media (min-width: 767.98px) {
+  .bloc_restaurants__content__case {
+    min-width: 490px;
+    flex: 1 1 0;
+    margin: auto;
+  }
+}
 .bloc_restaurants__content__case__img {
   grid-area: 1/1/5/7;
+}
+.bloc_restaurants__content__case__img img {
   width: 100%;
   height: 100%;
   border-top-left-radius: 15px;
@@ -281,6 +298,8 @@ main {
 }
 .bloc_restaurants__content__case__new {
   grid-area: 2/2/4/6;
+}
+.bloc_restaurants__content__case__new p {
   max-width: 80px;
   max-height: 30px;
   background-color: #99E2D0;
@@ -298,6 +317,8 @@ main {
 }
 .bloc_restaurants__content__case__title {
   grid-area: 6/1/7/2;
+}
+.bloc_restaurants__content__case__title h3 {
   font-weight: 700;
   font-size: 18px;
   margin: 0;
@@ -307,6 +328,8 @@ main {
 }
 .bloc_restaurants__content__case__text {
   grid-area: 8/1/9/2;
+}
+.bloc_restaurants__content__case__text p {
   font-size: 17px;
   font-weight: 300;
   line-height: 20px;
@@ -379,6 +402,9 @@ main {
   }
 }
 @keyframes fadeInMenu {
+  0% {
+    height: 0px;
+  }
   10% {
     height: 70px;
   }
@@ -435,17 +461,21 @@ main {
   margin: auto;
   background-color: #EAEAEA;
 }
-.bloc_menu__menu h4 {
+.bloc_menu__menu__partie {
+  width: 95%;
+  margin: auto;
+  padding: 15px 0px 15px 0;
+}
+.bloc_menu__menu__partie h4 {
   font-size: 16px;
   font-weight: 300;
   line-height: 19px;
   letter-spacing: 0em;
   text-align: left;
-  width: 95%;
-  margin: auto;
-  padding: 15px 0px 15px 0;
+  margin-bottom: 5px;
+  margin-top: 0;
 }
-.bloc_menu__menu h4 .border {
+.bloc_menu__menu__partie .border {
   border-bottom: solid 3px #99E2D0;
   width: 10%;
 }
@@ -499,20 +529,29 @@ main {
   max-width: 650px;
   background-color: white;
   border-radius: 15px;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 100%;
+  gap: 0px 0px;
   border-top: solid 1px #FF79DA;
   border-bottom: solid 1px #9356DC;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1019607843);
 }
-.bloc_menu__menu__content__case__par {
+.bloc_menu__menu__content__case__in {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  grid-area: 1/1/1/1;
+}
+.bloc_menu__menu__content__case__in__par {
   flex-grow: 1;
   overflow: hidden;
   padding-left: 15px;
   order: 1;
 }
-.bloc_menu__menu__content__case__title {
+.bloc_menu__menu__content__case__in__title {
   font-size: 18px;
   font-weight: 550;
   line-height: 21px;
@@ -523,7 +562,7 @@ main {
   overflow: hidden;
   white-space: nowrap;
 }
-.bloc_menu__menu__content__case__text {
+.bloc_menu__menu__content__case__in__text {
   font-size: 15px;
   font-weight: 300;
   line-height: 18px;
@@ -534,7 +573,7 @@ main {
   overflow: hidden;
   white-space: nowrap;
 }
-.bloc_menu__menu__content__case__price {
+.bloc_menu__menu__content__case__in__price {
   font-size: 15px;
   font-weight: 700;
   line-height: 18px;
@@ -544,7 +583,7 @@ main {
   padding-right: 15px;
   order: 2;
 }
-.bloc_menu__menu__content__case__valide {
+.bloc_menu__menu__content__case__in__valide {
   order: 3;
   display: none;
   background: linear-gradient(193.33deg, #FF79DA -11.44%, #9356DC 123.93%);
@@ -553,7 +592,7 @@ main {
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
 }
-.bloc_menu__menu__content__case__valide::before {
+.bloc_menu__menu__content__case__in__valide::before {
   width: 16px;
   height: 16px;
   padding-top: 100%;
@@ -563,19 +602,27 @@ main {
   font: var(--fa-font-solid);
   color: white;
 }
-.bloc_menu__menu__content__case__checkbox:not(:checked) + .bloc_menu__menu__content__case__valide {
+.bloc_menu__menu__content__case__in__checkbox:not(:checked) + .bloc_menu__menu__content__case__in__valide {
   display: block;
   animation: valideOut 100ms ease-in 0s 1 normal forwards;
 }
-.bloc_menu__menu__content__case__checkbox:checked + .bloc_menu__menu__content__case__valide {
+.bloc_menu__menu__content__case__in__checkbox:checked + .bloc_menu__menu__content__case__in__valide {
   display: block;
   animation: valide 100ms ease-in 0s 1 normal forwards;
 }
-.bloc_menu__menu__content__case__checkbox:checked + .bloc_menu__menu__content__case__valide::before {
+.bloc_menu__menu__content__case__in__checkbox:checked + .bloc_menu__menu__content__case__in__valide::before {
   content: "\f00c";
 }
-.bloc_menu__menu__content__case__checkbox {
+.bloc_menu__menu__content__case__in__checkbox {
   display: none;
+}
+.bloc_menu__menu__content__case label {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  grid-area: 1/1/1/1;
 }
 .bloc_menu__menu__content__case:hover {
   border-top: solid 2px #FF79DA;
@@ -583,61 +630,61 @@ main {
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.4117647059);
   cursor: pointer;
 }
-.bloc_menu__menu__entree div label:nth-child(1) {
+.bloc_menu__menu__entree div .bloc_menu__menu__content__case:nth-child(1) {
   position: relative;
   left: 100%;
   height: 0px;
   animation: fadeInMenu 0.5s ease-in 0s 1 normal forwards;
 }
-.bloc_menu__menu__entree div label:nth-child(2) {
+.bloc_menu__menu__entree div .bloc_menu__menu__content__case:nth-child(2) {
   position: relative;
   left: 100%;
   height: 0px;
   animation: fadeInMenu 0.5s ease-in 0.5s 1 normal forwards;
 }
-.bloc_menu__menu__entree div label:nth-child(3) {
+.bloc_menu__menu__entree div .bloc_menu__menu__content__case:nth-child(3) {
   position: relative;
   left: 100%;
   height: 0px;
   animation: fadeInMenu 0.5s ease-in 1s 1 normal forwards;
 }
-.bloc_menu__menu__entree div label:nth-child(4) {
+.bloc_menu__menu__entree div .bloc_menu__menu__content__case:nth-child(4) {
   position: relative;
   left: 100%;
   height: 0px;
   animation: fadeInMenu 0.5s ease-in 1.5s 1 normal forwards;
 }
-.bloc_menu__menu__plat div label:nth-child(1) {
+.bloc_menu__menu__plat div .bloc_menu__menu__content__case:nth-child(1) {
   position: relative;
   left: 100%;
   height: 0px;
   animation: fadeInMenu 0.5s ease-in 2s 1 normal forwards;
 }
-.bloc_menu__menu__plat div label:nth-child(2) {
+.bloc_menu__menu__plat div .bloc_menu__menu__content__case:nth-child(2) {
   position: relative;
   left: 100%;
   height: 0px;
   animation: fadeInMenu 0.5s ease-in 2.5s 1 normal forwards;
 }
-.bloc_menu__menu__plat div label:nth-child(3) {
+.bloc_menu__menu__plat div .bloc_menu__menu__content__case:nth-child(3) {
   position: relative;
   left: 100%;
   height: 0px;
   animation: fadeInMenu 0.5s ease-in 3s 1 normal forwards;
 }
-.bloc_menu__menu__dessert div label:nth-child(1) {
+.bloc_menu__menu__dessert div .bloc_menu__menu__content__case:nth-child(1) {
   position: relative;
   left: 100%;
   height: 0px;
   animation: fadeInMenu 0.5s ease-in 3.5s 1 normal forwards;
 }
-.bloc_menu__menu__dessert div label:nth-child(2) {
+.bloc_menu__menu__dessert div .bloc_menu__menu__content__case:nth-child(2) {
   position: relative;
   left: 100%;
   height: 0px;
   animation: fadeInMenu 0.5s ease-in 4s 1 normal forwards;
 }
-.bloc_menu__menu__dessert div label:nth-child(3) {
+.bloc_menu__menu__dessert div .bloc_menu__menu__content__case:nth-child(3) {
   position: relative;
   left: 100%;
   height: 0px;

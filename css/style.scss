@@ -150,7 +150,7 @@ main{
 /* BLOC FONCTIONNEMENT */
 .bloc_fonctionnement{
     padding: 40px 0px 50px 0px;
-    h1{
+    h2{
         text-align: left;
         padding-left: 15px;
     }
@@ -302,6 +302,13 @@ main{
         transform: scale(0);
         height: 0px;
         animation: fadeIn $dureeLoader both;
+
+        @media (min-width: 767.98px) {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            padding: 0 5% 0 5%;
+        }
         &__case{
             width: 90%;
             height: 250px;
@@ -315,28 +322,38 @@ main{
             grid-template-rows: 5% 8% 2% 54% 3% 10% 1% 10% 2%; 
             gap: 0px 0px; 
 
+            @media (min-width: 767.98px) {
+                min-width: 490px;
+                flex: 1 1 0;
+                margin: auto;
+            }
+
             &__img{
                 grid-area: 1 / 1 / 5 / 7;
 
-                width: 100%;
-                height: 100%;
-                border-top-left-radius: 15px;
-                border-top-right-radius: 15px;
+                img{
+                    width: 100%;
+                    height: 100%;
 
-                object-fit: cover;
+                    border-top-left-radius: 15px;
+                    border-top-right-radius: 15px;
+
+                    object-fit: cover;
+                }
             }
 
             &__new{
                 grid-area: 2 / 2 / 4 / 6; 
-
-                max-width: 80px;
-                max-height: 30px;
-                background-color: #99E2D0;
-                margin: 0;
-                padding: 5px 3px 5px 3px;
-                font-size: 14px;
-                color: #008766;
-                border-radius: 2px;
+                p {
+                    max-width: 80px;
+                    max-height: 30px;
+                    background-color: #99E2D0;
+                    margin: 0;
+                    padding: 5px 3px 5px 3px;
+                    font-size: 14px;
+                    color: #008766;
+                    border-radius: 2px;
+                }
                 &--on{
                     display: block;
                 }
@@ -347,25 +364,28 @@ main{
 
             &__title{
                 grid-area: 6 / 1 / 7 / 2; 
-
-                font-weight: 700;
-                font-size: 18px;
-                margin: 0;
-                text-align: left;
-                padding-left: 10px;
-                color: black;
+                h3{
+                    font-weight: 700;
+                    font-size: 18px;
+                    margin: 0;
+                    text-align: left;
+                    padding-left: 10px;
+                    color: black;
+                }
             }
             
             &__text{
                 grid-area: 8 / 1 / 9 / 2; 
 
-                font-size: 17px;
-                font-weight: 300;
-                line-height: 20px;
-                text-align: left;
-                margin: 0;
-                padding-left: 10px;
-                color: black;
+                p{
+                    font-size: 17px;
+                    font-weight: 300;
+                    line-height: 20px;
+                    text-align: left;
+                    margin: 0;
+                    padding-left: 10px;
+                    color: black;
+                }
             }
 
             &__icon{
@@ -456,9 +476,8 @@ main{
 }
 
 @keyframes fadeInMenu{
-    0%, 99.99% {
-        //opacity: 0;
-        //transform: scale(0);
+    0%{
+        height: 0px;
     }
 
     10%{
@@ -469,9 +488,6 @@ main{
         left: -50%;
         height: 70px;
         position: inherit;
-        //height: 70px;
-        //opacity: 1;
-        //transform: scale(1);
     }
 }
 
@@ -530,15 +546,22 @@ $dureeIt : 0.5;
             background-color: $colorBackGreyDark;
         }
 
-        h4{
-            font-size: 16px;
-            font-weight: 300;
-            line-height: 19px;
-            letter-spacing: 0em;
-            text-align: left;
+        &__partie{
             width: 95%;
             margin: auto;
             padding: 15px 0px 15px 0;
+
+            h4{
+                font-size: 16px;
+                font-weight: 300;
+                line-height: 19px;
+                letter-spacing: 0em;
+                text-align: left;
+                margin-bottom: 5px;
+                margin-top: 0;
+            }
+            
+            
 
             .border{
                 border-bottom: solid 3px #99E2D0;
@@ -597,6 +620,7 @@ $dureeIt : 0.5;
             overflow: hidden;
             padding-top: 15px;
             padding-bottom: 20px;
+
             &__case{
                 width: 95%;
                 height: 70px;
@@ -605,102 +629,125 @@ $dureeIt : 0.5;
                 background-color: white;
                 border-radius: 15px;
 
-                display: flex;
-                flex-direction: row;
-                align-items: center;
+                display: grid; 
+                grid-template-columns: 100%; 
+                grid-template-rows: 100%; 
+                gap: 0px 0px; 
 
                 border-top: solid 1px $colorSecondary;
                 border-bottom: solid 1px $colorPrimary;
 
                 box-shadow: 0px 4px 15px 0px #0000001A;
+               
+                
 
-                &__par{
-                    flex-grow: 1;
-                    overflow: hidden;
-                    padding-left: 15px;
-                    order: 1;
-                }
-                &__title{
-                    font-size: 18px;
-                    font-weight: 550;
-                    line-height: 21px;
-                    letter-spacing: 0em;
-                    text-align: left;
-                    margin: 0;
-                    text-overflow: ellipsis;
-                    overflow: hidden; 
-                    white-space: nowrap;
-                }
-                &__text{
-                    font-size: 15px;
-                    font-weight: 300;
-                    line-height: 18px;
-                    letter-spacing: 0em;
-                    text-align: left;
-                    margin: 0;
-                    text-overflow: ellipsis;
-                    overflow: hidden; 
-                    white-space: nowrap;
-
-                }
-                &__price{
-                    font-size: 15px;
-                    font-weight: 700;
-                    line-height: 18px;
-                    letter-spacing: 0em;
-                    text-align: center;
-
-                    margin: 0;
-                    padding-right: 15px;
-                    order: 2;
-                }
-
-                &__valide{
-                    order: 3;
-                    display: none;
-                    background: linear-gradient(193.33deg, $colorSecondary -11.44%, $colorPrimary 123.93%);
+                &__in{
+                    width: 100%;
                     height: 100%;
-                    min-width: 25px;
 
-                    border-top-right-radius: 15px;
-                    border-bottom-right-radius: 15px;
-                }
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
 
-                &__valide::before{
-                    width: 16px;
-                    height: 16px;
+                    grid-area: 1 / 1 / 1 / 1;
 
-                    padding-top: 100%;
+                    &__par{
+                        flex-grow: 1;
+                        overflow: hidden;
+                        padding-left: 15px;
+                        order: 1;
+                    }
+                    &__title{
+                        font-size: 18px;
+                        font-weight: 550;
+                        line-height: 21px;
+                        letter-spacing: 0em;
+                        text-align: left;
+                        margin: 0;
+                        text-overflow: ellipsis;
+                        overflow: hidden; 
+                        white-space: nowrap;
+                    }
+                    &__text{
+                        font-size: 15px;
+                        font-weight: 300;
+                        line-height: 18px;
+                        letter-spacing: 0em;
+                        text-align: left;
+                        margin: 0;
+                        text-overflow: ellipsis;
+                        overflow: hidden; 
+                        white-space: nowrap;
 
-                    font-family: FontAwesome;
+                    }
+                    &__price{
+                        font-size: 15px;
+                        font-weight: 700;
+                        line-height: 18px;
+                        letter-spacing: 0em;
+                        text-align: center;
+
+                        margin: 0;
+                        padding-right: 15px;
+                        order: 2;
+                    }
+
+                    &__valide{
+                        order: 3;
+                        display: none;
+                        background: linear-gradient(193.33deg, $colorSecondary -11.44%, $colorPrimary 123.93%);
+                        height: 100%;
+                        min-width: 25px;
+
+                        border-top-right-radius: 15px;
+                        border-bottom-right-radius: 15px;
+                    }
+
+                    &__valide::before{
+                        width: 16px;
+                        height: 16px;
+
+                        padding-top: 100%;
+
+                        font-family: FontAwesome;
+                        display: inline-block;
+                        content: "\2b";
+                        font: var(--fa-font-solid);
+                        color: white;
+                    } 
+
+                    &__checkbox:not(:checked) +  &__valide{
+                        display: block;
+                        animation: valideOut 100ms ease-in 0s 1 normal forwards;
+
+                        
+                    }
+
+                    &__checkbox:checked +  &__valide{
+                        display: block;
+
+                        animation: valide 100ms ease-in 0s 1 normal forwards;
+                        
+                        
+                    }
+
+                    &__checkbox:checked +  &__valide::before{
+                        content: "\f00c";
+                    }
+
+                    &__checkbox{
+                        display: none;
+                        
+                    }
+                }   
+
+                label{
                     display: inline-block;
-                    content: "\2b";
-                    font: var(--fa-font-solid);
-                    color: white;
-                } 
-
-                &__checkbox:not(:checked) +  &__valide{
-                    display: block;
-                    animation: valideOut 100ms ease-in 0s 1 normal forwards;
-
-                    
-                }
-
-                &__checkbox:checked +  &__valide{
-                    display: block;
-
-                    animation: valide 100ms ease-in 0s 1 normal forwards;
-                    
-                    
-                }
-
-                &__checkbox:checked +  &__valide::before{
-                    content: "\f00c";
-                }
-
-                &__checkbox{
-                    display: none;
-                    
+                    width: 100%;
+                    height: 100%;
+                    top:0;
+                    left: 0;
+                    grid-area: 1 / 1 / 1 / 1;
                 }
             }
 
@@ -718,7 +765,7 @@ $dureeIt : 0.5;
         @for $y from 1 through 3{
             @if $y==1 {
                 &__entree{
-                    div label{
+                    div .bloc_menu__menu__content__case{
                         @for $i from 1 through 4{
                             &:nth-child(#{$i}){
                                 position: relative;
@@ -733,7 +780,7 @@ $dureeIt : 0.5;
                 }
             }   @else if $y==2 {
                 &__plat{
-                    div label{
+                    div .bloc_menu__menu__content__case{
                         @for $i from 1 through 3{
                             &:nth-child(#{$i}){
                                 position: relative;
@@ -748,7 +795,7 @@ $dureeIt : 0.5;
                 }
             }   @else if $y==3 {
                 &__dessert{
-                    div label{
+                    div .bloc_menu__menu__content__case{
                         @for $i from 1 through 3{
                             &:nth-child(#{$i}){
                                 position: relative;
