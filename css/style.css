@@ -78,6 +78,9 @@ main {
   background: linear-gradient(193.33deg, #FF79DA -11.44%, #9356DC 123.93%);
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.2509803922);
 }
+.btn:hover {
+  cursor: pointer;
+}
 
 .btn:hover {
   background: linear-gradient(193.33deg, #ff88de -11.44%, #a16be0 123.93%);
@@ -422,17 +425,14 @@ main {
 }
 .head_menu a {
   display: block;
-  padding: 15px 0px 15px 15px;
-}
-.head_menu a i {
-  height: 100%;
+  width: 7%;
 }
 .head_menu a i::before {
   color: black;
 }
 .head_menu__logo {
   flex-grow: 4;
-  margin-left: -15px;
+  padding-right: 7%;
 }
 .head_menu__logo img {
   width: 50%;
@@ -625,6 +625,9 @@ main {
   top: 0;
   left: 0;
   grid-area: 1/1/1/1;
+}
+.bloc_menu__menu__content__case label:hover {
+  cursor: pointer;
 }
 .bloc_menu__menu__content__case:hover {
   border-top: solid 2px #FF79DA;
