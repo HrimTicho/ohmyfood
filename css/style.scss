@@ -154,9 +154,23 @@ main{
 /* BLOC FONCTIONNEMENT */
 .bloc_fonctionnement{
     padding: 40px 0px 50px 0px;
+
+
     h2{
         text-align: left;
         padding-left: 15px;
+    }
+
+    @media (min-width: 767.98px) {
+        .--flex{
+            width: 80%;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            padding: 0 5% 0 5%;
+            gap: 40px;
+            margin: auto;
+        }
     }
 
     &__case{
@@ -168,6 +182,10 @@ main{
         margin: auto;
         margin-top: 25px;
         align-items: center;
+
+        @media (min-width: 767.98px) {
+            flex-grow: 4;
+        }
 
         &__number{
             width: 24px;
@@ -398,11 +416,16 @@ main{
            }
 
            &__iconLabel{
-            grid-area: 8 / 4; 
+                grid-area: 8 / 4; 
 
-            width: 20px;
-            height: 20px;
-            text-align: left;
+                width: 20px;
+                height: 20px;
+                text-align: left;
+
+            }
+
+            &__iconLabel:hover{
+                cursor: pointer;
 
             }
 
@@ -431,6 +454,10 @@ main{
 }
 
 /* PAGE MENU */
+//Variable
+$dureeIt : 0.5;
+
+//animation
 @keyframes valide{
     0%, 99.99%{
         position: relative;
@@ -495,14 +522,13 @@ main{
     }
 }
 
-$dureeIt : 0.5;
-
 
 .head_menu{
     display: flex;
     width: 100%;
     align-items: center;
     justify-content: center;
+    padding: 15px 0px 15px 0px;
     a{
         display: block;
         width: 7%;
@@ -593,6 +619,10 @@ $dureeIt : 0.5;
             height: 20px;
             display: inline;
 
+        }
+
+        &__iconLabel:hover{
+            cursor: pointer;
         }
 
         &__icon + label::before{
@@ -704,6 +734,7 @@ $dureeIt : 0.5;
 
                         border-top-right-radius: 15px;
                         border-bottom-right-radius: 15px;
+
                     }
 
                     &__valide::before{
@@ -760,9 +791,6 @@ $dureeIt : 0.5;
             }
 
             &__case:hover{
-                border-top: solid 2px $colorSecondary;
-                border-bottom: solid 2px $colorPrimary;
-
                 box-shadow: 0px 4px 15px 0px #00000069;
 
                 cursor: pointer;

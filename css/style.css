@@ -134,6 +134,17 @@ main {
   text-align: left;
   padding-left: 15px;
 }
+@media (min-width: 767.98px) {
+  .bloc_fonctionnement .--flex {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    padding: 0 5% 0 5%;
+    gap: 40px;
+    margin: auto;
+  }
+}
 .bloc_fonctionnement__case {
   width: 90%;
   display: flex;
@@ -143,6 +154,11 @@ main {
   margin: auto;
   margin-top: 25px;
   align-items: center;
+}
+@media (min-width: 767.98px) {
+  .bloc_fonctionnement__case {
+    flex-grow: 4;
+  }
 }
 .bloc_fonctionnement__case__number {
   width: 24px;
@@ -350,6 +366,9 @@ main {
   height: 20px;
   text-align: left;
 }
+.bloc_restaurants__content__case__iconLabel:hover {
+  cursor: pointer;
+}
 .bloc_restaurants__content__case .bloc_restaurants__content__case__icon + label::before {
   font-family: FontAwesome;
   display: inline-block;
@@ -422,6 +441,7 @@ main {
   width: 100%;
   align-items: center;
   justify-content: center;
+  padding: 15px 0px 15px 0px;
 }
 .head_menu a {
   display: block;
@@ -498,6 +518,9 @@ main {
   width: 20px;
   height: 20px;
   display: inline;
+}
+.bloc_menu__menu__iconLabel:hover {
+  cursor: pointer;
 }
 .bloc_menu__menu__icon + label::before {
   font-family: FontAwesome;
@@ -630,8 +653,6 @@ main {
   cursor: pointer;
 }
 .bloc_menu__menu__content__case:hover {
-  border-top: solid 2px #FF79DA;
-  border-bottom: solid 2px #9356DC;
   box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.4117647059);
   cursor: pointer;
 }
